@@ -2,7 +2,7 @@ name: CI
 on: workflow_dispatch
 
 jobs:
-  testing-ubuntu_latest-py3.6:
+  testing-ubuntu_latest-py36:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
