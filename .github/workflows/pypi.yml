@@ -1,0 +1,24 @@
+name: PyPI
+on: workflow_dispatch
+
+jobs:
+  publish-sdist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - name: Setup Python-3.6
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.6
+      - name: Publish to PyPI
+        shell: bash
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          python -m pip install --upgrade build twine
+          python -m build -s
+          python -m twine upload dist/*

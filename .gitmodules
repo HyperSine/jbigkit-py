@@ -1,0 +1,3 @@
+[submodule "src/jbigkit"]
+	path = src/jbigkit
+	url = https://www.cl.cam.ac.uk/~mgk25/git/jbigkit

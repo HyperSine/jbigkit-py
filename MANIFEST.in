@@ -1,0 +1,6 @@
+include src/jbigkit/libjbig/jbig.h
+include src/jbigkit/libjbig/jbig.c
+include src/jbigkit/libjbig/jbig_ar.h
+include src/jbigkit/libjbig/jbig_ar.c
+include src/binding/*.hpp
+include src/binding/*.cpp
